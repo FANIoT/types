@@ -18,8 +18,15 @@ import "time"
 // State represents the asset's state after the decode phase that is done by models.
 // This structure is created and remains in the platform for each incoming data.
 type State struct {
-	Value interface{} // The value should be of the same type that is defined in asset’s profile.
-	At    time.Time   // 2018-09-19T03:04:10Z
+	Raw   interface{} // The value should be of the same type that is defined in asset’s profile.
+	Value struct {
+		Boolean bool
+		Number  float64
+		String  string
+		Object  interface{}
+		Array   []interface{}
+	}
+	At time.Time // 2018-09-19T03:04:10Z
 
 	Project string // Project Name
 	ThingID string // Thing Identification
