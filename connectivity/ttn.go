@@ -17,6 +17,6 @@ package connectivity
 // these information are stored in connectivity section of things and
 // used in link component.
 type TTN struct {
-	ApplicatioID string `json:"applicatio_id"`
-	DeviceEUI    string `json:"device_eui"`
+	ApplicationID string `json:"application_id"`
+	DeviceEUI     string `json:"device_eui"`
 }
