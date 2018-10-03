@@ -21,6 +21,7 @@ type Thing struct {
 
 	Assets         map[string]Asset       `json:"assets" bson:"assets"`                 // thing assets (sensors and actuators)
 	Connectivities map[string]interface{} `json:"connectivities" bson:"connectivities"` // supported connectivities (like TheThingsNetwork and etc.)
+	Tags           []string               `json:"tags" bson:"tags"`                     // tags associated with things
 
 	Project string `json:"project" bson:"project"`
 }
