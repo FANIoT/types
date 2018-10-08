@@ -22,6 +22,10 @@ type Thing struct {
 	Assets         map[string]Asset       `json:"assets" bson:"assets"`                 // thing assets (sensors and actuators)
 	Connectivities map[string]interface{} `json:"connectivities" bson:"connectivities"` // supported connectivities (like TheThingsNetwork and etc.)
 	Tags           []string               `json:"tags" bson:"tags"`                     // tags associated with things
+	Location       struct {
+		Type        string    `json:"type" bson:"type"`               // GeoJSON type eg. "Point"
+		Coordinates []float64 `json:"coordinates" bson:"coordinates"` // condinates eg. [-73.856077, 40.848447]
+	} `json:"location" bson:"location"`
 
 	Project string `json:"project" bson:"project"`
 }
