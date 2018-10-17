@@ -14,7 +14,8 @@
 package types
 
 // Error is a global error type in I1820 platfrom and all components tries to
-// reqturn their error in this format
+// reqturn their error in this format.
+// Based on buffalo 0.13.0 errors
 type Error struct {
 	Code  int    `json:"code"`
 	Error string `json:"error"`
